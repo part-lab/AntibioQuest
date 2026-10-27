@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antibio Quest</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header class="brand">
+      <img src="Logo_EPFL.png" alt="EPFL" width="50" />
+      <span>Antibio Quest</span>
+    </header>
+
+    <!-- ===== Barre de progression ===== -->
+    <nav class="progression" id="progression" aria-label="Étapes"></nav>
+
+    <main class="card">
+      <!-- <h1>TITRE</h1> -->
+      <p class="sub">Après avoir terminé les deux étapes de sélection, 
+        rentrez votre code pour avoir accès à vos molécules candidates.
+      </p> <!-- template -->
+    
+      <div class="rangee" id="couleurs"></div>    <!-- SAISIE CODE -->
+   
+      <div class="rangee" id="symboles" style="color: red;"></div>    <!-- SAISIE CODE -->
+
+      <div class="msg" id="msg"></div>
+      <div class="buttons">
+        <a href="etape1_1_ao9x.html" style="text-decoration:none"><button class="arriere" id="btn-arriere">← Retourner</button></a>
+        <button class="avant" id="btn-avant">Continuer →</button>
+      </div>
+     
+    </main>
+
+     <!-- <footer class="copyright">© 2026 EPFL - Service de Promotion des Sciences</footer> -->
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+      var ETAPE_ACTUELLE = 1 ;         // ← 1 à N : etape sur barre de progression
+      
+      // ← Réponses de l'énigme : listez ici les couleurs et symboles à cocher
+      // Palette et symboles proposés
+      var couleurs = [
+        { id: "rouge",    fond: "#ef4444" },
+        { id: "vert",     fond: "#13c462" },
+        { id: "noir",     fond: "#111827" },
+        { id: "jaune",    fond: "#d8e660" },
+        { id: "rose",    fond: "#f06a8a" },
+        { id: "violet",   fond: "#7851b0" }
+      ];
+      var symboles = [
+        { id: "engrenage",  emoji: "⚙" },
+        { id: "alambic",   emoji: "⚗" },
+        { id: "fleur",  emoji: "⚘" },
+        { id: "ceres",  emoji: "⚳" },
+        { id: "uranus",  emoji: "⛢" },
+        { id: "vesta",  emoji: "⚶" }
+      ];
+      var COULEURS_GAGNANTES = ["rouge", "violet", "vert", "jaune"];
+      var SYMBOLES_GAGNANTS = ["fleur", "alambic", "vesta"];
+      var PAGE_SUIVANTE = "etape1_3_qnp4.html";
+    </script>
+    <script src="script_barre-progression.js"></script>
+    <script src="script_saisie-couleurs-symboles.js"></script>
+
+  </body>
+</html>

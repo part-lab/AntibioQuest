@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antibio Quest</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+    <header class="brand">
+
+    </header>
+
+    <!-- ===== Barre de progression ===== -->
+    <nav class="progression" id="progression" aria-label="Étapes"></nav>
+
+    <main class="card">
+      <h1>Test d’efficacité</h1> 
+      <p class="sub">Maintenant que vous savez que ces 5 molécules peuvent éliminer <em>C. crassii</em>, 
+        vous devez vérifier si elles agissent aussi sur la souche résistante détectée à l’hôpital.<br><br> 
+        Un échantillon de cette souche a été prélevé et étalé sur des gels de culture.<br><br>   
+        Rendez-vous au <b>Laboratoire de tests antibactériens</b> où vous trouverez le protocole et le matériel nécesaire.
+      </p> 
+      <div class="inputs" id="inputs"></div>
+      <div class="msg" id="msg"></div>
+      <div class="buttons">
+        <a href="etape2_3_p5zr.html" style="text-decoration:none"><button class="arriere" id="btn-arriere">← Retourner</button></a>
+        <a href="etape3_2_hp6t.html" style="text-decoration:none"><button class="avant" id="btn-avant">Continuer →</button></a> <!-- template -->
+      </div>
+    </main>
+    <!--<footer class="copyright">© 2026 EPFL - Service de Promotion des Sciences</footer> -->
+
+<!-- ===== SCRIPTS ===== -->
+    <script>
+      var ETAPE_ACTUELLE = 3 ;           // ← 1 à N : etape sur barre de progression
+    </script>
+    <script src="script_barre-progression.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antibio Quest</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header class="brand">
+      <img src="Logo_EPFL.png" alt="EPFL" width="50" />
+      <span>Antibio Quest</span>
+    </header>
+
+    <!-- ===== Barre de progression ===== -->
+    <nav class="progression" id="progression" aria-label="Étapes"></nav>
+
+    <main class="card">
+      <!-- <h1>TITRE</h1> -->
+      <p class="sub">Une fois l’expérience terminée, rentrez votre code pour valider cette étape.<br><br>
+      </p> <!-- template -->
+    
+      <div class="inputs" id="inputs"></div>  <!-- SAISIE CODE -->
+
+      <div class="msg" id="msg"></div>
+      <div class="buttons">
+        <a href="etape3_1_1otj.html" style="text-decoration:none"><button class="arriere" id="btn-arriere">← Retourner</button></a>
+        <button class="avant" id="btn-avant">Continuer →</button>
+      </div>
+     <!-- <p class="hint">Code par défaut : 12345657 (modifiable dans le script)</p> -->
+    </main>
+
+     <!-- <footer class="copyright">© 2026 EPFL - Service de Promotion des Sciences</footer> -->
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+      var ETAPE_ACTUELLE = 3 ;         // ← 1 à N : etape sur barre de progression
+      var CODE = "259"; // ← code de 2 à 8 chiffres : la longueur décide du nombre de cases
+      var PAGE_SUIVANTE = "etape3_3_wdd7.html"; // ← nom du fichier de la page suivante
+    </script>
+    <script src="script_barre-progression.js"></script>
+    <script src="script_saisie-code.js"></script>
+
+
+  </body>
+</html>

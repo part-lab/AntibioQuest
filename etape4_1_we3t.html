@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antibio Quest</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+    <header class="brand">
+      <img src="Logo_EPFL.png" alt="EPFL" width="50" />
+      <span>Antibio Quest</span>
+    </header>
+
+    <!-- ===== Barre de progression ===== -->
+    <nav class="progression" id="progression" aria-label="Étapes"></nav>
+
+    <main class="card">
+      <h1>Test de toxicité</h1> 
+      <p class="sub">Avant de pouvoir utiliser un antibiotique,
+         on doit s’assurer qu’il n’est pas toxique pour l’être humain. <br><br> 
+        Vous allez vérifier que vos molécules n’abiment pas le foie des patients.<br><br>   
+        Demandez-vous aux technicien-nes de la <b>Plateforme d'histologie</b> les images qu'ils ont prises au microscope.
+      </p> 
+
+      <div class="msg" id="msg"></div>
+      <div class="buttons">
+        <a href="etape3_3_wdd7.html" style="text-decoration:none"><button class="arriere" id="btn-arriere">← Retourner</button></a>
+        <a href="etape4_2_a8dg.html" style="text-decoration:none"><button class="avant" id="btn-avant">Continuer →</button></a> <!-- template -->
+      </div>
+    </main>
+    <!--<footer class="copyright">© 2026 EPFL - Service de Promotion des Sciences</footer> -->
+
+<!-- ===== SCRIPTS ===== -->
+    <script>
+      var ETAPE_ACTUELLE = 4 ;           // ← 1 à N : etape sur barre de progression
+    </script>
+    <script src="script_barre-progression.js"></script>
+
+  </body>
+</html>

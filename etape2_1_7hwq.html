@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antibio Quest</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+    <header class="brand">
+
+    </header>
+
+    <!-- ===== Barre de progression ===== -->
+    <nav class="progression" id="progression" aria-label="Étapes"></nav>
+
+    <main class="card">
+      <h1>Test <em>in vitro</em></h1> 
+      <p class="sub">Les 12 molécules que vous avez obtenues sont de bonnes candidates... en théorie! <br>
+        Vous devez maintenant tester si elles sont réellement capables de tuer <em>Cryptobacillus crassii</em>. <br><br> 
+        Pour cela, faites un test <em>in vitro</em>: vous allez tester l’effet de chaque molécule, 
+        séparément, sur les bactéries qu’on a cultivées dans un liquide nutritif.<br><br>
+        Rendez-vous au <b>Labo de biologie cellulaire</b> où vous trouverez le protocole d’expérience et le matériel. 
+      </p> 
+      <div class="buttons">
+        <a href="etape1_4_6ovp.html" style="text-decoration:none"><button class="arriere" id="btn-arriere">← Retourner</button></a>
+        <a href="etape2_2_w34d.html" style="text-decoration:none"><button class="avant" id="btn-avant">Continuer →</button></a> <!-- template -->
+      </div>
+    </main>
+    <!--<footer class="copyright">© 2026 EPFL - Service de Promotion des Sciences</footer> -->
+
+<!-- ===== SCRIPTS ===== -->
+    <script>
+      var ETAPE_ACTUELLE = 2 ;           // ← 1 à N : etape sur barre de progression
+    </script>
+    <script src="script_barre-progression.js"></script>
+
+  </body>
+</html>

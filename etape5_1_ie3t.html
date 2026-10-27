@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antibio Quest</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header class="brand">
+      <img src="Logo_EPFL.png" alt="EPFL" width="50" />
+      <span>Antibio Quest</span>
+    </header>
+
+    <!-- ===== Barre de progression ===== -->
+    <nav class="progression" id="progression" aria-label="Étapes"></nav>
+
+    <main class="card">
+      <!-- <h1>TITRE</h1> -->
+      <p class="sub">Quelle molécule décidez-vous de produire ?<br><br>
+      </p> <!-- template -->
+    
+      <div class="inputs" id="inputs"></div>  <!-- SAISIE CODE -->
+
+      <div class="msg" id="msg"></div>
+      <div class="buttons">
+        <a href="etape4_3_hrw5.html" style="text-decoration:none"><button class="arriere" id="btn-arriere">← Retourner</button></a>
+        <button class="avant" id="btn-avant">Continuer →</button>
+      </div>
+     <!-- <p class="hint">Code par défaut : 12345657 (modifiable dans le script)</p> -->
+    </main>
+
+     <!-- <footer class="copyright">© 2026 EPFL - Service de Promotion des Sciences</footer> -->
+
+    <!-- ===== SCRIPTS -->
+    <script>
+      var ETAPE_ACTUELLE = 5 ;         // ← 1 à N : etape sur barre de progression
+      var CODE = "2"; // ← code de 2 à 8 chiffres : la longueur décide du nombre de cases
+      var PAGE_SUIVANTE_A = "etape5_2A_a8dg.html"; // ← nom du fichier de la page suivante
+      var PAGE_SUIVANTE_B = "etape5_2B_bs4o.html"; // ← nom du fichier de la page suivante
+    </script>
+    <script src="script_barre-progression.js"></script>
+    <script src="script_choix_molecule.js"></script>
+
+
+  </body>
+</html>
