@@ -1,7 +1,7 @@
 // Génération dynamique des cases selon la longueur du code
 var inputs = [];
 var conteneur = document.getElementById("inputs");
-for (var i = 0; i < CODE.length; i++) {
+for (var i = 0; i < CODES[0].length; i++) {
 var input = document.createElement("input");
 input.type = "text";
 input.setAttribute("inputmode", "numeric");
@@ -26,26 +26,26 @@ input.addEventListener("keydown", function (e) {
 input.addEventListener("paste", function (e) {
   e.preventDefault();
   var data = (e.clipboardData.getData("text") || "").replace(/\D/g, "");
-  data.slice(0, CODE.length).split("").forEach(function (d, j) {
+  data.slice(0, CODES[0].length).split("").forEach(function (d, j) {
     if (inputs[j]) inputs[j].value = d;
   });
-  inputs[Math.min(data.length, CODE.length - 1)].focus();
-  if (data.slice(0, CODE.length).length === CODE.length) valider();
+  inputs[Math.min(data.length, CODES[0].length - 1)].focus();
+  if (data.slice(0, CODES[0].length).length === CODES[0].length) valider();
 });
 });
 
 function valider() {
-var saisie = inputs.map(function (x) { return x.value; }).join("");
-if (saisie === CODE) {
-  // Marque la session comme autorisée pour la page 2
-  try { sessionStorage.setItem("accesOK", "1"); } catch (e) {}
-  window.location.href = PAGE_SUIVANTE;
-} else {
-  msg.textContent = "Vos résultats ne correspondent à ceux des autres équipes du projet. Vérifiez vos résultats et rentrez de nouveau votre code.";
-  msg.className = "msg error";
-  inputs.forEach(function (x) { x.value = ""; });
-  inputs[0].focus();
-}
+  var saisie = inputs.map(function (x) { return x.value; }).join("");
+  if (CODES.indexOf(saisie) !== -1) {
+    // Marque la session comme autorisée pour la page 2
+    try { sessionStorage.setItem("accesOK", "1"); } catch (e) {}
+    window.location.href = PAGE_SUIVANTE;
+  } else {
+    msg.textContent = "Vos résultats ne correspondent à ceux des autres équipes du projet. Vérifiez vos résultats et rentrez de nouveau votre code.";
+    msg.className = "msg error";
+    inputs.forEach(function (x) { x.value = ""; });
+    inputs[0].focus();
+  }
 }
 
 btn.addEventListener("click", valider);
