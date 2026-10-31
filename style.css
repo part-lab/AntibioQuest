@@ -88,8 +88,8 @@ input:focus { border-color: #a8ddcd; }
   color: black;
 }
 .case {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 12px;
   border: 2px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
