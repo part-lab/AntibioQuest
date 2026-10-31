@@ -35,6 +35,16 @@
 <!-- ===== SCRIPTS - template ===== -->
     <script>
       var ETAPE_ACTUELLE = 5 ;    // ← 1 à N : etape sur barre de progression
+      var MESSAGES_ERREUR = [
+        "Trouvez les chargé-es de liaison de l'hôpital pour leur demander le contact du Dr Santos",
+      ];
+      var msg = document.getElementById("msg");
+      var tour = 0;
+
+      document.getElementById("btn-avant").addEventListener("click", function () {
+        msg.textContent = MESSAGES_ERREUR[tour % MESSAGES_ERREUR.length];
+        tour++;
+      });
     </script>
     <script src="script_barre-progression.js"></script>
 
