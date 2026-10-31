@@ -11,7 +11,7 @@
         var img = document.createElement("div");
         img.className = "objet";
         var vraiImg = document.createElement("img");
-        vraiImg.src = objet.image;        // ← "fraise.png" devient la source de l'image
+        vraiImg.src = objet.image;        
         vraiImg.alt = objet.nom;          // texte alternatif (accessibilité)
         vraiImg.style.width = "100%";
         vraiImg.style.height = "100%";
@@ -52,7 +52,7 @@
           try { sessionStorage.setItem("couleursOK", "1"); } catch (e) {}
           window.location.href = PAGE_SUIVANTE;
         } else {
-          msg.textContent = "Vos résultats ne correspondent à ceux des autres équipes du projet. Vérifiez vos résultats et rentrez de nouveau votre code.";
+          msg.textContent = "Vos résultats ne correspondent pas à ceux des autres équipes du projet. Vérifiez vos résultats et rentrez de nouveau votre code.";
           msg.className = "msg error";
         }
       }
