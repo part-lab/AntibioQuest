@@ -41,7 +41,7 @@ function valider() {
     try { sessionStorage.setItem("accesOK", "1"); } catch (e) {}
     window.location.href = PAGE_SUIVANTE;
   } else {
-    msg.textContent = "Vos résultats ne correspondent à ceux des autres équipes du projet. Vérifiez vos résultats et rentrez de nouveau votre code.";
+    msg.textContent = "Vos résultats ne correspondent pas à ceux des autres équipes du projet. Vérifiez vos résultats et rentrez de nouveau votre code.";
     msg.className = "msg error";
     inputs.forEach(function (x) { x.value = ""; });
     inputs[0].focus();
